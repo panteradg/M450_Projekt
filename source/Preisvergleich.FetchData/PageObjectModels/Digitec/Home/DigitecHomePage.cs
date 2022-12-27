@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Preisvergleich.FetchData.PageObjectModels.Digitec.Home
 {
-    public static class HomePage
+    public static class DigitecHomePage
     {
         public static void NavigateTo()
         {
-            WebUiDriver.driver.Navigate().GoToUrl(HomePageMap.Url);
+            WebUiDriver.driver.Navigate().GoToUrl(DigitecHomePageMap.Url);
         }
 
         public static void SearchFor(string searchInput)
@@ -20,11 +20,11 @@ namespace Preisvergleich.FetchData.PageObjectModels.Digitec.Home
             // Check if a popup came up, if it did, close it
             if (WebUiDriver.IsElementPresent(By.XPath("//button[@aria-label='Schliessen']")))
             {
-                HomePageMap.ClosePopupButton.Click();
+                DigitecHomePageMap.ClosePopupButton.Click();
             }
 
-            HomePageMap.SearchInputField.SendKeys(searchInput);
-            HomePageMap.ExecuteSearchButton.Click();
+            DigitecHomePageMap.SearchInputField.SendKeys(searchInput);
+            DigitecHomePageMap.ExecuteSearchButton.Click();
         }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Preisvergleich.FetchData.PageObjectModels.Digitec.Home
 {
-    internal static class HomePageMap
+    internal static class DigitecHomePageMap
     {
         public static string Url = "https://www.digitec.ch/";
         public static IWebElement SearchInputField =>
