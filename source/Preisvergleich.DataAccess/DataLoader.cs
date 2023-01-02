@@ -1,6 +1,6 @@
 ﻿namespace Preisvergleich.DataAccess
 {
-    public class Class1
+    public class DataLoader
     {
 
     }

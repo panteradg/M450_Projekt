@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Preisvergleich.FetchData.PageObjectModels.Digitec.Home;
+using Preisvergleich.FetchData;
+
+WebUiDriver.Init();
+
+// Remove Code after, just for testing purposes
+DigitecHomePage.NavigateTo();
+DigitecHomePage.SearchFor("iPhone 12 32gb");
