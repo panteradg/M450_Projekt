@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Preisvergleich.DataAccess\Preisvergleich.DataAccess.csproj" />
     <ProjectReference Include="..\Preisvergleich.FetchData\Preisvergleich.FetchData.csproj" />
   </ItemGroup>
 

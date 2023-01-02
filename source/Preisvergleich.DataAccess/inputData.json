@@ -18,7 +18,11 @@
     }
   ],
   "produkte": [
-    "iPhone 14 Pro 256GB",
-    "iPhone 13 128GB"
+    {
+      "name": "iPhone 14 Pro 256GB"
+    },
+    {
+      "name": "iPhone 13 128GB"
+    }
   ]
 }
