@@ -12,6 +12,6 @@ namespace Preisvergleich.FetchData.PageObjectModels.Digitec.SearchResult
     internal static class DigitecSearchResultPageMap
     {
         public static IWebElement GetPrice =>
-            WebUiDriver.wait.Until(ExpectedConditions.ElementExists(By.XPath("//div/article[1]/div[4]/span")));
+            WebUiDriver.wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div/article[1]/div[4]/span")));
     }
 }

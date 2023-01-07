@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <Folder Include="PageObjectModels\Brack\" />
-    <Folder Include="PageObjectModels\Interdiscount\" />
     <Folder Include="PageObjectModels\Mediamarkt\" />
   </ItemGroup>
 
