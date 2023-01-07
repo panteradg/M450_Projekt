@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Preisvergleich.DataAccess.Models;
+using Preisvergleich.Models;
 
 namespace Preisvergleich.DataAccess
 {
