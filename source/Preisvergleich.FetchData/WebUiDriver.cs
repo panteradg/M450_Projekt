@@ -21,7 +21,7 @@ namespace Preisvergleich.FetchData
             options.AddArgument("ignore-certificate-errors");
             driver = new ChromeDriver(options);
 
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(100));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
             return driver;
         }

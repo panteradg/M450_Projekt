@@ -1,11 +1,12 @@
 ﻿using OpenQA.Selenium;
+using SeleniumExtras.WaitHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Preisvergleich.FetchData.PageObjectModels.Digitec
+namespace Preisvergleich.FetchData.PageObjectModels
 {
     public class DigitecHomePageMap : IHomePageMap
     {
@@ -22,7 +23,7 @@ namespace Preisvergleich.FetchData.PageObjectModels.Digitec
         {
             get
             {
-                return WebUiDriver.driver.FindElement(By.XPath("//form[@action='/search']//div/section/ul/li[1]/div/div/span/strong"));
+                return WebUiDriver.wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//form[@action='/search']//div/section/ul/li[1]/div/div/span/strong")));
             }
         }
     }

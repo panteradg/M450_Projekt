@@ -10,11 +10,25 @@ public class HomePage
         this.homePageMap = homePageMap;
     }
 
-    public int GetPrice(string searchInput)
+    public decimal GetPrice(string searchInput)
     {
         WebUiDriver.driver.Navigate().GoToUrl(homePageMap.Url);
         homePageMap.SearchInputField.SendKeys(searchInput);
-        string stringPrice = homePageMap.SearchInputField.Text;
-        return int.Parse(Regex.Match(stringPrice, @"\d+").Value);
+        string resultString = homePageMap.FirstResultPrice.Text;
+        return StringToDecimal(resultString);
+    }
+
+    private decimal StringToDecimal(string resultString)
+    {
+        string convertedString = "";
+        for (int i = 0; i < resultString.Length; i++)
+        {
+            if (Char.IsDigit(resultString[i]) || (resultString[i].Equals(Char.Parse(".")) && Char.IsDigit(resultString[i+1])))
+            {
+                convertedString += resultString[i];
+            }
+        }
+
+        return decimal.Parse(convertedString);
     }
 }
