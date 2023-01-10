@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Preisvergleich.DataAccess.Models
+namespace Preisvergleich.Models
 {
     internal class ProduktVonWebseite
     {

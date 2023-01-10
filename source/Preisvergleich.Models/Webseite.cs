@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Preisvergleich.DataAccess.Models
+namespace Preisvergleich.Models
 {
-    public class Produkt
+    public class Webseite
     {
+        public string Url { get; set; }
         public string Name { get; set; }
     }
 }

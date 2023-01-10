@@ -12,9 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="PageObjectModels\Brack\" />
-    <Folder Include="PageObjectModels\Interdiscount\" />
-    <Folder Include="PageObjectModels\Mediamarkt\" />
+    <ProjectReference Include="..\Preisvergleich.Models\Preisvergleich.Models.csproj" />
   </ItemGroup>
 
 </Project>
