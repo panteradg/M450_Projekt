@@ -1,28 +1,4 @@
-{
-  "webseiten": [
-    {
-      "url": "digitec.ch",
-      "name": "Digitec"
-    },
-    {
-      "url": "brack.ch",
-      "name": "Brack"
-    },
-    {
-      "url": "interdiscount.ch",
-      "name": "Interdiscount"
-    },
-    {
-      "url": "mediamarkt.ch",
-      "name": "Mediamarkt"
-    }
-  ],
-  "produkte": [
-    {
-      "name": "iPhone 14 Pro 256GB"
-    },
-    {
-      "name": "iPhone 13 128GB"
-    }
-  ]
-}
+[
+  "iPhone 14 Pro 256GB",
+  "iPhone 13 128GB"
+]

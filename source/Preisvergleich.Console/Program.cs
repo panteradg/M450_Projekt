@@ -4,17 +4,36 @@ using Preisvergleich.FetchData.PageObjectModels;
 
 WebUiDriver.Init();
 
-// Remove Code after, just for testing purposes
-DataLoader dataLoader = new DataLoader();
 
 HomePage digitecHomePage = new HomePage(new DigitecHomePageMap());
-decimal resultDigitec = digitecHomePage.GetPrice(dataLoader.Produkte.First().Name);
-
 HomePage interdiscountHomePage = new HomePage(new InterdiscountHomePageMap());
-decimal resultInterdiscount = interdiscountHomePage.GetPrice("ip");
-
 HomePage microspotHomePage = new HomePage(new MicrospotHomePageMap());
-decimal resultMicrospot = microspotHomePage.GetPrice("ip");
 
+DataLoader dataLoader = new DataLoader();
 
-Console.ReadKey();
+foreach (string produkt in dataLoader.Products)
+{
+    foreach (Website website in Enum.GetValues(typeof(Website)))
+    {
+        decimal result;
+        switch (website)
+        {
+            case Website.Digitec:
+                result = digitecHomePage.GetPrice(produkt);
+                break;
+            case Website.Interdiscount:
+                result = interdiscountHomePage.GetPrice(produkt);
+                break;
+            case Website.Microspot:
+                result = microspotHomePage.GetPrice(produkt);
+                break;
+          default:
+                throw new ArgumentOutOfRangeException();
+        }
+        dataLoader.AddProduct(produkt, website, result);
+    }
+}
+
+dataLoader.SaveData();
+
+WebUiDriver.driver.Close();

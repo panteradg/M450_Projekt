@@ -10,8 +10,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Preisvergleich.Models\Preisvergleich.Models.csproj" />
-  </ItemGroup>
-
 </Project>

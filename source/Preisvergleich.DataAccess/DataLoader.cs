@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Preisvergleich.Models;
 
 namespace Preisvergleich.DataAccess
 {
@@ -10,13 +9,33 @@ namespace Preisvergleich.DataAccess
             using (StreamReader reader = new StreamReader("../../../../Preisvergleich.DataAccess/inputData.json"))
             {
                 string json = reader.ReadToEnd();
-                var jsonResult = JsonConvert.DeserializeAnonymousType(json, new { Webseiten = new List<Webseite>(), Produkte = new List<Produkt>() });
-                this.Webseiten = jsonResult.Webseiten;
-                this.Produkte = jsonResult.Produkte;
+                Products = JsonConvert.DeserializeObject<List<string>>(json);
             }
         }
 
-        public List<Webseite> Webseiten { get; }
-        public List<Produkt> Produkte { get; }
+        public void AddProduct(string product, Website website, decimal price)
+        {
+            ProductsFromWebsite.Add(new ProductFromWebsite()
+            {
+                Price = price,
+                Product = product,
+                Website = website,
+                Timestamp = DateTime.Now
+            });
+        }
+
+        public bool SaveData()
+        {
+            string json = JsonConvert.SerializeObject(ProductsFromWebsite);
+
+            using (StreamWriter writer = File.AppendText("../../../../Preisvergleich.DataAccess/outputData.json"))
+            {
+                writer.WriteLine(json);
+            };
+            return false;
+        }
+        
+        public List<ProductFromWebsite> ProductsFromWebsite { get; set; }
+        public List<string> Products { get; }
     }
 }
