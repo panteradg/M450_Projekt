@@ -11,8 +11,4 @@
     <PackageReference Include="Selenium.WebDriver" Version="4.7.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Preisvergleich.Models\Preisvergleich.Models.csproj" />
-  </ItemGroup>
-
 </Project>
