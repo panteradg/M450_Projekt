@@ -12,6 +12,7 @@ DataLoader dataLoader = new DataLoader();
 bool canContinue = true;
 do
 {
+    Console.Clear();
     Console.WriteLine("\nWhat do you want to do?\n1\tGet new Data\n2\tCompare a product\n3\tExit application");
     var input = Console.ReadKey();
     switch (input.Key)
@@ -31,6 +32,7 @@ do
         default:
             break;  
     }
+    Console.ReadKey();
 } while (true);
 
 
@@ -67,10 +69,17 @@ void GetData()
 
 void ComparePrice(string product)
 {
-    List<ProductFromWebsite> products = dataLoader.ProductFromWebsiteListList.Last().Where(x => x.Product == product).ToList();
-    Console.WriteLine($"\nProduct shown: {product}");
-    foreach(ProductFromWebsite productFromWebsite in products)
+    if(dataLoader.ProductFromWebsiteListList.Count() == 0)
     {
-        Console.WriteLine($"{productFromWebsite.Website}:\t{productFromWebsite.Price}");
+        Console.WriteLine("\nNo data...");
+    }
+    else
+    {
+        List<ProductFromWebsite> products = dataLoader.ProductFromWebsiteListList.Last().Where(x => x.Product == product).ToList();
+        Console.WriteLine($"\nProduct shown: {product}");
+        foreach (ProductFromWebsite productFromWebsite in products)
+        {
+            Console.WriteLine($"{productFromWebsite.Website}:\t{productFromWebsite.Price}");
+        }
     }
 }
