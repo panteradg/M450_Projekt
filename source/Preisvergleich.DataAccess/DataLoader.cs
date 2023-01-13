@@ -6,6 +6,7 @@ namespace Preisvergleich.DataAccess
     {
         public DataLoader()
         {
+            // Read in data from inputData.json and deserialize it into a List of strings
             using (StreamReader reader = new StreamReader("../../../../Preisvergleich.DataAccess/inputData.json"))
             {
                 string jsonInput = reader.ReadToEnd();
@@ -13,6 +14,7 @@ namespace Preisvergleich.DataAccess
                 reader.Close();
             }
 
+            // Read in data from outputData.json and deserialize it into a List of List of ProductFromWebsite objects
             using (StreamReader reader = new StreamReader("../../../../Preisvergleich.DataAccess/outputData.json"))
             {
                 string jsonOutput = reader.ReadToEnd();
@@ -23,6 +25,7 @@ namespace Preisvergleich.DataAccess
 
         public void AddProduct(string product, Website website, float price)
         {
+            // Add a new ProductFromWebsite object to the ProductsFromWebsite list
             ProductsFromWebsite.Add(new ProductFromWebsite()
             {
                 Price = price,
