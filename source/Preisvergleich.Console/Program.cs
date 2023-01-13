@@ -8,13 +8,13 @@ WebUiDriver.Init();
 DataLoader dataLoader = new DataLoader();
 
 HomePage digitecHomePage = new HomePage(new DigitecHomePageMap());
-decimal resultDigitec = digitecHomePage.GetPrice(dataLoader.Produkte.First().Name);
+float resultDigitec = digitecHomePage.GetPrice(dataLoader.Produkte.First().Name);
 
 HomePage interdiscountHomePage = new HomePage(new InterdiscountHomePageMap());
-decimal resultInterdiscount = interdiscountHomePage.GetPrice("ip");
+float resultInterdiscount = interdiscountHomePage.GetPrice("ip");
 
 HomePage microspotHomePage = new HomePage(new MicrospotHomePageMap());
-decimal resultMicrospot = microspotHomePage.GetPrice("ip");
+float resultMicrospot = microspotHomePage.GetPrice("ip");
 
 
 Console.ReadKey();

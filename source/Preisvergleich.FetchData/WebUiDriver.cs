@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
@@ -38,6 +33,13 @@ namespace Preisvergleich.FetchData
             {
                 return false;
             }
+
+            /*
+            if (driver.FindElements(by).Count > 0)
+            {
+                return true;
+            }
+            return false;*/
         }
     }
 }
