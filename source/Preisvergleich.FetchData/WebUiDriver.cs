@@ -14,6 +14,7 @@ namespace Preisvergleich.FetchData
         public static IWebDriver driver = null;
         public static WebDriverWait wait = null;
 
+        // Initializes and configures the web driver
         public static IWebDriver Init()
         {
             var options = new ChromeOptions();
@@ -26,7 +27,7 @@ namespace Preisvergleich.FetchData
             return driver;
         }
 
-
+        // Checks if an element is present on the page
         public static bool IsElementPresent(By by)
         {
             try
