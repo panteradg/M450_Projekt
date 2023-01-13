@@ -46,7 +46,7 @@ void GetData()
     {
         foreach (Website website in Enum.GetValues(typeof(Website)))
         {
-            decimal result;
+            float result;
             switch (website)
             {
                 case Website.Digitec:

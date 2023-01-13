@@ -21,7 +21,7 @@ namespace Preisvergleich.DataAccess
             }
         }
 
-        public void AddProduct(string product, Website website, decimal price)
+        public void AddProduct(string product, Website website, float price)
         {
             ProductsFromWebsite.Add(new ProductFromWebsite()
             {
