@@ -1,3 +1,58 @@
 [
-
+  [
+    {
+      "Price": 999.0,
+      "Product": "iPhone 14 Pro 256GB",
+      "Website": "Digitec",
+      "Timestamp": "2023-01-13T22:39:30.1560638+01:00"
+    },
+    {
+      "Price": 1419.0,
+      "Product": "iPhone 14 Pro 256GB",
+      "Website": "Interdiscount",
+      "Timestamp": "2023-01-13T22:39:31.8735539+01:00"
+    },
+    {
+      "Price": 1299.0,
+      "Product": "iPhone 14 Pro 256GB",
+      "Website": "Microspot",
+      "Timestamp": "2023-01-13T22:39:33.6508924+01:00"
+    },
+    {
+      "Price": 776.0,
+      "Product": "iPhone 13 128GB",
+      "Website": "Digitec",
+      "Timestamp": "2023-01-13T22:39:35.4967147+01:00"
+    },
+    {
+      "Price": 829.0,
+      "Product": "iPhone 13 128GB",
+      "Website": "Interdiscount",
+      "Timestamp": "2023-01-13T22:39:37.0186267+01:00"
+    },
+    {
+      "Price": 785.55,
+      "Product": "iPhone 13 128GB",
+      "Website": "Microspot",
+      "Timestamp": "2023-01-13T22:39:39.3181738+01:00"
+    },
+    {
+      "Price": 740.0,
+      "Product": "Samsung S22",
+      "Website": "Digitec",
+      "Timestamp": "2023-01-13T22:39:40.8900525+01:00"
+    },
+    {
+      "Price": 999.0,
+      "Product": "Samsung S22",
+      "Website": "Interdiscount",
+      "Timestamp": "2023-01-13T22:39:42.2609537+01:00"
+    },
+    {
+      "Price": 699.15,
+      "Product": "Samsung S22",
+      "Website": "Microspot",
+      "Timestamp": "2023-01-13T22:39:43.7985737+01:00"
+    }
+  ]
 ]

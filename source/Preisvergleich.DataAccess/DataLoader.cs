@@ -27,7 +27,7 @@ namespace Preisvergleich.DataAccess
             {
                 Price = price,
                 Product = product,
-                Website = website.ToString(),
+                Website = Enum.GetName(typeof(Website), website),
                 Timestamp = DateTime.Now
             });
         }
