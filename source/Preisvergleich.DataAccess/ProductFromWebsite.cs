@@ -10,7 +10,7 @@ namespace Preisvergleich.DataAccess
     {
         public decimal Price { get; set; }
         public string Product { get; set; }
-        public Website Website { get; set; }
+        public string Website { get; set; }
         public DateTime Timestamp { get; set; }
     }
 }
