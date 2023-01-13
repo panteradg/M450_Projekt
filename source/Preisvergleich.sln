@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Preisvergleich.FetchData", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Preisvergleich.FetchData.Tests", "Preisvergleich.FetchData.Tests\Preisvergleich.FetchData.Tests.csproj", "{4629AEE1-F8EE-4F31-8A0F-406091F066F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preisvergleich.AcceptanceTests", "Preisvergleich.AcceptanceTests\Preisvergleich.AcceptanceTests.csproj", "{58B2421A-34C1-48AE-92D4-C1A7F29B8101}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Preisvergleich.AcceptanceTests", "Preisvergleich.AcceptanceTests\Preisvergleich.AcceptanceTests.csproj", "{58B2421A-34C1-48AE-92D4-C1A7F29B8101}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Preisvergleich.DataAccess.Tests", "Preisvergleich.DataLoader.Tests\Preisvergleich.DataAccess.Tests.csproj", "{12CD69BD-0233-4BB7-A2B0-92E7BF5B15C8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{58B2421A-34C1-48AE-92D4-C1A7F29B8101}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58B2421A-34C1-48AE-92D4-C1A7F29B8101}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58B2421A-34C1-48AE-92D4-C1A7F29B8101}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12CD69BD-0233-4BB7-A2B0-92E7BF5B15C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CD69BD-0233-4BB7-A2B0-92E7BF5B15C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CD69BD-0233-4BB7-A2B0-92E7BF5B15C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CD69BD-0233-4BB7-A2B0-92E7BF5B15C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

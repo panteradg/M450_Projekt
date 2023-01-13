@@ -13,6 +13,7 @@ public sealed class FetchDataSteps
     private Website usedWebsite;
     private DataLoader loader = new DataLoader();
     private readonly string product = "iPhone 14 Pro 256GB";
+    private DateTime timestamp;
 
     [Given(@"the price is fetched from (.*)")]
     public void ThePriceIsFetchedFrom(string website)
@@ -45,6 +46,7 @@ public sealed class FetchDataSteps
     public void ThePriceIsSavedToTheJsonFile()
     {
         loader.AddProduct(product, usedWebsite, price);
+        timestamp = DateTime.Now;
         loader.SaveData();
     }
 
@@ -55,7 +57,8 @@ public sealed class FetchDataSteps
         {
             Price = price,
             Product = product,
-            Website = Enum.GetName(typeof(Website), usedWebsite)
+            Website = Enum.GetName(typeof(Website), usedWebsite),
+            Timestamp = timestamp
         };
         
         ProductFromWebsite result = loader.ProductFromWebsiteListList.Last().FirstOrDefault();
